@@ -3,24 +3,5 @@
   "description": "这是一个支持多语言的现代React应用示例",
   "language": "语言",
   "changeLanguage": "切换语言",
-  "currentLanguage": "当前语言：{{language}}",
-  "features": {
-    "title": "功能特性",
-    "i18n": "国际化支持",
-    "typescript": "TypeScript支持",
-    "vite": "Vite构建工具",
-    "modern": "现代React开发"
-  },
-  "buttons": {
-    "clickMe": "点击我",
-    "reset": "重置",
-    "submit": "提交"
-  },
-  "messages": {
-    "hello": "你好，世界！",
-    "goodbye": "再见！",
-    "loading": "加载中...",
-    "error": "发生错误",
-    "success": "操作成功"
-  }
+  "currentLanguage": "当前语言：{{language}}"
 }
