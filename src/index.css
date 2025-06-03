@@ -6,3 +6,31 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
+
+/* 隐藏滚动条但保持滚动功能 */
+/* 适用于所有元素 */
+* {
+  /* Firefox */
+  scrollbar-width: none;
+  /* IE/Edge */
+  -ms-overflow-style: none;
+}
+
+/* Webkit内核浏览器 (Chrome, Safari, Edge) */
+*::-webkit-scrollbar {
+  display: none;
+}
+
+/* 确保html和body元素也隐藏滚动条 */
+html,
+body {
+  /* Firefox */
+  scrollbar-width: none;
+  /* IE/Edge */
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
