@@ -3,5 +3,39 @@
   "description": "这是一个支持多语言的现代React应用示例",
   "language": "语言",
   "changeLanguage": "切换语言",
-  "currentLanguage": "当前语言：{{language}}"
+  "currentLanguage": "当前语言：{{language}}",
+  "navigation": {
+    "home": "首页",
+    "about": "关于"
+  },
+  "pages": {
+    "home": {
+      "title": "首页",
+      "description": "欢迎来到我们的多语言React应用",
+      "welcomeTitle": "欢迎使用",
+      "welcomeMessage": "这是一个现代化的React应用，支持多语言和客户端路由。",
+      "featuresTitle": "主要特性",
+      "feature1": "React 19 + TypeScript 支持",
+      "feature2": "多语言国际化 (中文、英语、日语)",
+      "feature3": "客户端路由导航"
+    },
+    "about": {
+      "title": "关于我们",
+      "description": "了解更多关于这个项目的信息",
+      "projectTitle": "项目介绍",
+      "projectDescription": "这是一个使用现代前端技术栈构建的多语言React应用示例。",
+      "technologiesTitle": "使用的技术",
+      "featuresTitle": "功能特性",
+      "feature1": "响应式设计",
+      "feature2": "多语言支持",
+      "feature3": "类型安全的路由",
+      "feature4": "现代化的开发体验"
+    },
+    "notFound": {
+      "title": "页面未找到",
+      "description": "抱歉，您访问的页面不存在",
+      "message": "您访问的页面可能已被删除、重命名或暂时不可用。",
+      "backToHome": "返回首页"
+    }
+  }
 }

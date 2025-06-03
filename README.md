@@ -5,9 +5,10 @@
 ## 🌟 功能特性
 
 - ✨ **国际化支持** - 支持中文、日语、英语三种语言
-- 🔷 **TypeScript 支持** - 完整的类型安全
+- 🧭 **客户端路由** - 使用 React Router DOM 实现单页应用导航
+- 🔷 **TypeScript 支持** - 完整的类型安全，包括路由类型定义
 - ⚡ **Vite 构建工具** - 快速的开发体验
-- 🚀 **现代 React 开发** - 使用 React 18+最新特性
+- 🚀 **现代 React 开发** - 使用 React 19+最新特性
 - 🎨 **响应式设计** - 适配移动端和桌面端
 - 🔧 **自定义 Hooks** - 封装语言偏好管理逻辑
 
@@ -45,7 +46,14 @@ pnpm run preview
 src/
 ├── components/           # React组件
 │   ├── LanguageSwitcher.tsx  # 语言切换组件
-│   └── FeatureList.tsx       # 功能展示组件
+│   ├── Navigation.tsx        # 导航组件
+│   └── Layout.tsx           # 布局组件
+├── pages/               # 页面组件
+│   ├── HomePage.tsx     # 首页
+│   ├── AboutPage.tsx    # 关于页面
+│   └── NotFoundPage.tsx # 404错误页面
+├── router/              # 路由配置
+│   └── index.tsx        # 路由定义和类型
 ├── hooks/               # 自定义Hooks
 │   └── useLanguagePreference.ts  # 语言偏好管理Hook
 ├── locales/             # 语言资源文件
@@ -56,6 +64,28 @@ src/
 ├── App.tsx             # 主应用组件
 └── main.tsx            # 应用入口
 ```
+
+## 🧭 路由配置
+
+### 路由结构
+
+- `/` - 首页 (HomePage)
+- `/about` - 关于页面 (AboutPage)
+- `/*` - 404 错误页面 (NotFoundPage) - 处理未匹配的路由
+
+### 路由特性
+
+- **类型安全** - 使用 TypeScript 定义路由路径常量
+- **嵌套路由** - 支持布局组件和子路由
+- **导航高亮** - 自动高亮当前页面的导航链接
+- **404 处理** - 优雅处理未找到的页面
+
+### 添加新路由
+
+1. 在 `src/pages/` 目录下创建新的页面组件
+2. 在 `src/router/index.tsx` 中添加路由配置
+3. 在多语言资源文件中添加页面相关的文本
+4. 在 `src/components/Navigation.tsx` 中添加导航链接（如需要）
 
 ## 🌍 国际化配置
 
@@ -86,9 +116,10 @@ function MyComponent() {
 
 ## 🛠️ 技术栈
 
-- **React 18+** - 用户界面库
+- **React 19+** - 用户界面库
 - **TypeScript** - 类型安全的 JavaScript
 - **Vite** - 现代化构建工具
+- **React Router DOM** - 客户端路由库
 - **react-i18next** - React 国际化库
 - **i18next** - 国际化框架
 - **pnpm** - 高效的包管理器

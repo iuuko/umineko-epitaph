@@ -3,5 +3,39 @@
   "description": "This is a modern React application example with multi-language support",
   "language": "Language",
   "changeLanguage": "Change Language",
-  "currentLanguage": "Current Language: {{language}}"
+  "currentLanguage": "Current Language: {{language}}",
+  "navigation": {
+    "home": "Home",
+    "about": "About"
+  },
+  "pages": {
+    "home": {
+      "title": "Home",
+      "description": "Welcome to our multilingual React application",
+      "welcomeTitle": "Welcome",
+      "welcomeMessage": "This is a modern React application with multi-language support and client-side routing.",
+      "featuresTitle": "Key Features",
+      "feature1": "React 19 + TypeScript support",
+      "feature2": "Multi-language internationalization (Chinese, English, Japanese)",
+      "feature3": "Client-side routing navigation"
+    },
+    "about": {
+      "title": "About Us",
+      "description": "Learn more about this project",
+      "projectTitle": "Project Introduction",
+      "projectDescription": "This is a multilingual React application example built with modern frontend technology stack.",
+      "technologiesTitle": "Technologies Used",
+      "featuresTitle": "Features",
+      "feature1": "Responsive design",
+      "feature2": "Multi-language support",
+      "feature3": "Type-safe routing",
+      "feature4": "Modern development experience"
+    },
+    "notFound": {
+      "title": "Page Not Found",
+      "description": "Sorry, the page you are looking for does not exist",
+      "message": "The page you are looking for might have been removed, renamed, or is temporarily unavailable.",
+      "backToHome": "Back to Home"
+    }
+  }
 }
