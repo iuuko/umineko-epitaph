@@ -41,7 +41,7 @@ i18n
   // 初始化 i18next
   .init({
     resources,
-    fallbackLng: "en-US", // 默认语言
+    fallbackLng: "ja-JP", // 默认语言
     debug: import.meta.env.DEV, // 开发环境下启用调试
 
     // 语言检测配置
