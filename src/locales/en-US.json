@@ -1,0 +1,26 @@
+{
+  "welcome": "Welcome to React Internationalization App",
+  "description": "This is a modern React application example with multi-language support",
+  "language": "Language",
+  "changeLanguage": "Change Language",
+  "currentLanguage": "Current Language: {{language}}",
+  "features": {
+    "title": "Features",
+    "i18n": "Internationalization Support",
+    "typescript": "TypeScript Support",
+    "vite": "Vite Build Tool",
+    "modern": "Modern React Development"
+  },
+  "buttons": {
+    "clickMe": "Click Me",
+    "reset": "Reset",
+    "submit": "Submit"
+  },
+  "messages": {
+    "hello": "Hello, World!",
+    "goodbye": "Goodbye!",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Operation successful"
+  }
+}
