@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { supportedLanguages, getLanguageName } from "../i18n";
+import { supportedLanguages, getLanguageName } from "@/i18n";
 
 interface LanguagePreference {
   currentLanguage: string;

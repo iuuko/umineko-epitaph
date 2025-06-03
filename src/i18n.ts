@@ -3,9 +3,9 @@ import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 
 // 导入语言资源
-import zhCN from "./locales/zh-CN.json";
-import jaJP from "./locales/ja-JP.json";
-import enUS from "./locales/en-US.json";
+import zhCN from "@/locales/zh-CN.json";
+import jaJP from "@/locales/ja-JP.json";
+import enUS from "@/locales/en-US.json";
 
 // 语言资源配置
 const resources = {

@@ -1,8 +1,8 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom"; // 导入路由相关组件
-import Layout from "../components/Layout.tsx";
-import HomePage from "../pages/HomePage.tsx";
-import AboutPage from "../pages/AboutPage.tsx";
-import NotFoundPage from "../pages/NotFoundPage.tsx";
+import Layout from "@/components/Layout.tsx";
+import HomePage from "@/pages/HomePage.tsx";
+import AboutPage from "@/pages/AboutPage.tsx";
+import NotFoundPage from "@/pages/NotFoundPage.tsx";
 
 // 路由路径常量，确保类型安全
 export const ROUTES = {
