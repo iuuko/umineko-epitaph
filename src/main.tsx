@@ -1,6 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "@/index.css";
+import "virtual:uno.css";
 import "@/i18n"; // 初始化i18n
 import App from "@/App.tsx";
 
