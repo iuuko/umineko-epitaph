@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
     DndContext,
     closestCenter,
@@ -45,25 +45,64 @@ const Quadrillion: React.FC = () => {
     };
     // handle click event in per phase
     const handleClick = (index: number) => {
-        if (phase === 0) {
+        if (phase === 0 || (phase >= 3 && phase <= 7)) {
             // remove the character at the index
             const newQuadState = [...quadState];
             newQuadState[index] = "·";
             setQuadState(newQuadState);
-            nextPhase(phase);
         }
-        console.log(quadState);
     };
     // handle next phase
     const nextPhase = (currentPhase: number) => {
         if (currentPhase === 0) {
-            const expectedState = ['·', 'u', '·', 'd', 'r', '·', 'l', 'l', '·', 'o', '·'];
+            const expectedState = ['·', 'u', '·', 'd', 'r', '·', '·', 'l', '·', 'o', '·'];
             if (quadState.every((char, index) => char === expectedState[index])) {
                 setPhase(1);
                 setDraggable(true);
             }
+        } else if (currentPhase === 1) {
+            const expectedState = ['·', 'u', '·', 'd', '·', 'r', '·', 'l', '·', 'o', '·'];
+            if (quadState.every((char, index) => char === expectedState[index])) {
+                setPhase(2);
+            }
+        } else if (currentPhase === 2) {
+            const expectedState = ['·', 'l', '·', 'o', '·', 'r', '·', 'd', '·', 'u', '·'];
+            if (quadState.every((char, index) => char === expectedState[index])) {
+                setPhase(3);
+                setDraggable(false);
+            }
+        } else if (currentPhase === 3) {
+            const expectedState = ['·', '·', '·', 'o', '·', 'r', '·', 'd', '·', 'u', '·'];
+            if (quadState.every((char, index) => char === expectedState[index])) {
+                setPhase(4);
+            }
+        } else if (currentPhase === 4) {
+            const expectedState = ['·', '·', '·', '·', '·', 'r', '·', 'd', '·', 'u', '·'];
+            if (quadState.every((char, index) => char === expectedState[index])) {
+                setPhase(5);
+            }
+        } else if (currentPhase === 5) {
+            const expectedState = ['·', '·', '·', '·', '·', '·', '·', 'd', '·', 'u', '·'];
+            if (quadState.every((char, index) => char === expectedState[index])) {
+                setPhase(6);
+            }
+        } else if (currentPhase === 6) {
+            const expectedState = ['·', '·', '·', '·', '·', '·', '·', '·', '·', 'u', '·'];
+            if (quadState.every((char, index) => char === expectedState[index])) {
+                setPhase(7);
+            }
+        } else if (currentPhase === 7) {
+            const expectedState = ['·', '·', '·', '·', '·', '·', '·', '·', '·', '·', '·'];
+            if (quadState.every((char, index) => char === expectedState[index])) {
+                // golden land
+                setPhase(8);
+                setQuadState(() => Array.from("Congrats!"));
+            }
         }
     };
+
+    // next phase check when quadState changes
+    useEffect(() => { nextPhase(phase); }, [quadState]);
 
     return (
         <div className="h-screen flex flex-col items-center justify-center overflow-hidden p-4 select-none">
