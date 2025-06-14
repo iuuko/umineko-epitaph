@@ -1,11 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Link, useLocation } from "react-router-dom";
 
-interface NavigationProps {
-  className?: string;
-}
-
-const Navigation: React.FC<NavigationProps> = ({ className = "" }) => {
+const Navigation: React.FC = () => {
   const { t } = useTranslation();
   const location = useLocation();
 
@@ -14,8 +10,8 @@ const Navigation: React.FC<NavigationProps> = ({ className = "" }) => {
   };
 
   return (
-    <nav className={`navigation ${className}`}>
-      <div className="flex items-center justify-center gap-8">
+    <nav>
+      <div className="flex items-center justify-center gap-8 select-none">
         <div>
           <Link
             to="/"
