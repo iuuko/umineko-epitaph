@@ -59,6 +59,9 @@
     "quadrillion":{
       "title":"クワドリアン"
     },
+    "goldenLand":{
+      "title":"黄金郷"
+    },
     "notFound": {
       "title": "ページが見つかりません",
       "description": "申し訳ございませんが、お探しのページは存在しません",

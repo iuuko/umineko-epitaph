@@ -7,6 +7,7 @@ import "@/i18n";
 import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Quadrillion from "@/pages/Quadrillion";
+import GoldenLand from "@/pages/GoldenLand";
 import NotFound from "@/pages/NotFound";
 
 // 创建路由配置
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
   {
     path: "/quadrillion",
     element: <Quadrillion />,
+  },
+  {
+    path: "/goldenLand",
+    element: <GoldenLand />,
   },
   {
     path: "*",
