@@ -30,7 +30,9 @@ const Home: React.FC = () => {
             <p key={i}>{t(`epitaph.${i + 1}`)}</p>
           ))}
         </div>
-        <div>
+        <div className="mt-10"
+          flex="1"
+          text="gray-400 center">
           <LanguageSwitcher />
         </div>
       </main>
