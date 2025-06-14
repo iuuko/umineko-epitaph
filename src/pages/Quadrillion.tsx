@@ -16,8 +16,9 @@ import {
 } from '@dnd-kit/sortable';
 
 const Quadrillion: React.FC = () => {
-    const [quadState, setQuadState] = useState<string[]>(() => Array.from("Quadrillion"));
     const [phase, setPhase] = useState<number>(0);
+    const [quadState, setQuadState] = useState<string[]>(() => Array.from("Quadrillion"));
+    const [draggable, setDraggable] = useState(true);
 
     // sortable sensors
     const sensors = useSensors(
@@ -71,7 +72,8 @@ const Quadrillion: React.FC = () => {
                             <SortableItem
                                 id={index.toString()}
                                 char={char}
-                                onClick={handleClick} />
+                                onClick={handleClick}
+                                draggable={draggable} />
                         ))}
                     </SortableContext>
                 </DndContext>
@@ -86,10 +88,12 @@ const SortableItem = ({
     id,
     char,
     onClick,
+    draggable,
 }: {
     id: string;
     char: string;
     onClick: (index: number) => void;
+    draggable: boolean;
 }) => {
     const {
         attributes,
@@ -108,9 +112,8 @@ const SortableItem = ({
         <span
             ref={setNodeRef}
             style={style}
-            {...attributes}
-            {...listeners}
-            onClick={() => onClick(parseInt(id))}>
+            onClick={() => onClick(parseInt(id))}
+            {...(draggable ? { ...attributes, ...listeners } : {})}>
             {char}
         </span>
     );
