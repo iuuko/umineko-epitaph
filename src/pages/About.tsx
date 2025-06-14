@@ -1,10 +1,11 @@
 import { useTranslation } from "react-i18next";
+import Navigation from "@/components/Navigation";
 
 const About: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <div>
+    <div className="relative p-4">
       <header>
         <h1>{t("pages.about.title")}</h1>
         <p>{t("pages.about.description")}</p>
@@ -14,7 +15,7 @@ const About: React.FC = () => {
         <section>
           <h2>{t("pages.about.projectTitle")}</h2>
           <p>{t("pages.about.projectDescription")}</p>
-          
+
           <h3>{t("pages.about.technologiesTitle")}</h3>
           <ul>
             <li>React 19</li>
@@ -22,6 +23,7 @@ const About: React.FC = () => {
             <li>Vite</li>
             <li>React Router DOM</li>
             <li>React i18next</li>
+            <li>UnoCSS</li>
           </ul>
 
           <h3>{t("pages.about.featuresTitle")}</h3>
@@ -33,6 +35,7 @@ const About: React.FC = () => {
           </ul>
         </section>
       </main>
+      <Navigation />
     </div>
   );
 };
