@@ -15,16 +15,20 @@ const Navigation: React.FC<NavigationProps> = ({ className = "" }) => {
 
   return (
     <nav className={`navigation ${className}`}>
-      <div className="flex items-center justify-center">
-        <div className="mr-4">
-          <Link to="/" className={`nav-link ${isActive("/") ? "active" : ""}`} text="gray-400">
+      <div className="flex items-center justify-center gap-8">
+        <div>
+          <Link
+            to="/"
+            className={`nav-link ${isActive("/") ? "font-bold" : ""}`}
+            text="gray-400">
             {t("navigation.home")}
           </Link>
         </div>
-        <div className="border-l border-gray-300 pl-4">
+        <div>
           <Link
             to="/about"
-            className={`nav-link ${isActive("/about") ? "active" : ""}`} text="gray-400">
+            className={`nav-link ${isActive("/about") ? "font-bold" : ""}`}
+            text="gray-400">
             {t("navigation.about")}
           </Link>
         </div>

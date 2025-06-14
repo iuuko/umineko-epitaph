@@ -23,7 +23,7 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
       <select
         value={i18n.language}
         onChange={(e) => handleLanguageChange(e.target.value)}
-        className="rounded-md bg-gray-700 border-gray-600 text-gray-400"
+        className="p-1 rounded-md border-none outline-none"
       >
         {supportedLanguages.map((language) => (
           <option key={language.code} value={language.code}>

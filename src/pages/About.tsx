@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import Navigation from "@/components/Navigation";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const About: React.FC = () => {
   const { t } = useTranslation();
@@ -56,9 +57,10 @@ const About: React.FC = () => {
           </section>
         </main>
 
-        <footer className="mt-16 pt-8 border-t border-gray-300 text-center">
+        <footer className="mt-16 pt-8 text-center flex flex-col gap-4">
+          <LanguageSwitcher />
           <Navigation />
-          <p className="mt-4 text-sm text-gray-500">
+          <p className="text-sm text-gray-500">
             UUKO Lab &copy; {new Date().getFullYear()}
           </p>
         </footer>

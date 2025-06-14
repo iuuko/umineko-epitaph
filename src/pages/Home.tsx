@@ -1,5 +1,4 @@
 import { useTranslation } from "react-i18next";
-import LanguageSwitcher from "@/components/LanguageSwitcher";
 import Navigation from "@/components/Navigation";
 
 const Home: React.FC = () => {
@@ -33,7 +32,6 @@ const Home: React.FC = () => {
         </div>
         <div className="mt-12 flex flex-col gap-1"
           text="gray-400 center">
-          <LanguageSwitcher />
           <Navigation />
         </div>
       </main>
