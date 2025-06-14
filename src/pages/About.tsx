@@ -4,14 +4,14 @@ const About: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="page-container">
-      <header className="page-header">
+    <div>
+      <header>
         <h1>{t("pages.about.title")}</h1>
-        <p className="description">{t("pages.about.description")}</p>
+        <p>{t("pages.about.description")}</p>
       </header>
 
-      <main className="page-main">
-        <section className="about-content">
+      <main>
+        <section>
           <h2>{t("pages.about.projectTitle")}</h2>
           <p>{t("pages.about.projectDescription")}</p>
           
