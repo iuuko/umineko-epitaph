@@ -16,14 +16,16 @@ const Home: React.FC = () => {
         aria-hidden="true" />
       {/* Content */}
       <main className="relative z-1 p4"
-        text="white">
+        text="white sm">
         {/* Title */}
         <div text="amber-400 5xl center"
-          font="bold">
+          font="bold"
+          lt-sm="text-3xl">
           <p>{t("epitaph.title")}</p>
         </div>
         {/* Epitaph */}
-        <div text="amber-400 2xl center">
+        <div text="amber-400 2xl center"
+          lt-sm="text-sm">
           {[...Array(22).keys()].map((i) => (
             <p key={i}>{t(`epitaph.${i + 1}`)}</p>
           ))}
