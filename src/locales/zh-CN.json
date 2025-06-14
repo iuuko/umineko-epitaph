@@ -63,9 +63,9 @@
       "title":"黄金乡"
     },
     "notFound": {
-      "title": "页面未找到",
-      "description": "抱歉，您访问的页面不存在",
-      "message": "您访问的页面可能已被删除、重命名或暂时不可用。",
+      "title": "汝好无能！",
+      "description": "汝因逻辑错误被困在棋盘上，无法前进。",
+      "message": "没有爱便看不见。",
       "backToHome": "返回首页"
     }
   }
