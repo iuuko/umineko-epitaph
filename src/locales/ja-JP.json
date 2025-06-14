@@ -1,6 +1,5 @@
 {
-  "welcome": "React国際化アプリケーションへようこそ",
-  "description": "これは多言語対応の現代的なReactアプリケーションの例です",
+  "appTitle": "うみねこ碑文",
   "language": "言語",
   "changeLanguage": "言語を変更",
   "currentLanguage": "現在の言語：{{language}}",
@@ -56,6 +55,9 @@
       "feature3": "型安全なルーティング",
       "feature4": "現代的な開発体験",
       "version": "バージョン"
+    },
+    "quadrillion":{
+      "title":"クワドリアン"
     },
     "notFound": {
       "title": "ページが見つかりません",

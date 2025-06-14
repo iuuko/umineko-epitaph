@@ -1,8 +1,10 @@
 import { useTranslation } from "react-i18next";
 import Navigation from "@/components/Navigation";
+import { useDocTitle } from "@/hooks/useDocTitle";
 
 const Home: React.FC = () => {
   const { t } = useTranslation();
+  useDocTitle(t("pages.home.title"));
 
   return (
     <div className="relative min-h-100vh overflow-hidden">

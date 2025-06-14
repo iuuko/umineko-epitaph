@@ -1,8 +1,10 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import { useDocTitle } from "@/hooks/useDocTitle";
 
 const NotFound: React.FC = () => {
   const { t } = useTranslation();
+  useDocTitle(t("pages.notFound.title"));
 
   return (
     <div>

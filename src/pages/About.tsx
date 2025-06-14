@@ -1,9 +1,11 @@
 import { useTranslation } from "react-i18next";
 import Navigation from "@/components/Navigation";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { useDocTitle } from "@/hooks/useDocTitle";
 
 const About: React.FC = () => {
   const { t } = useTranslation();
+  useDocTitle(t("pages.about.title"));
 
   return (
     <div className="min-h-screen flex flex-col items-center">

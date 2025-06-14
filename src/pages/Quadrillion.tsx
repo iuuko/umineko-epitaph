@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import { useDocTitle } from "@/hooks/useDocTitle";
 import {
     DndContext,
     closestCenter,
@@ -16,6 +18,9 @@ import {
 } from '@dnd-kit/sortable';
 
 const Quadrillion: React.FC = () => {
+    const { t } = useTranslation();
+    useDocTitle(t("pages.quadrillion.title"));
+    
     const [phase, setPhase] = useState<number>(0);
     const [quadState, setQuadState] = useState<string[]>(() => Array.from("Quadrillion"));
     const [draggable, setDraggable] = useState(false);

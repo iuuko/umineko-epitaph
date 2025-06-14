@@ -1,6 +1,5 @@
 {
-  "welcome": "Welcome to React Internationalization App",
-  "description": "This is a modern React application example with multi-language support",
+  "appTitle": "Umineko Epitaph",
   "language": "Language",
   "changeLanguage": "Change Language",
   "currentLanguage": "Current Language: {{language}}",
@@ -56,6 +55,9 @@
       "feature3": "Type-safe routing",
       "feature4": "Modern development experience",
       "version": "Version"
+    },
+    "quadrillion":{
+      "title":"Quadrillion"
     },
     "notFound": {
       "title": "Page Not Found",
