@@ -34,11 +34,8 @@ export const getLanguageName = (code: string): string => {
 };
 
 i18n
-  // 检测用户语言
   .use(LanguageDetector)
-  // 传递 i18n 实例给 react-i18next
   .use(initReactI18next)
-  // 初始化 i18next
   .init({
     resources,
     fallbackLng: "ja-JP", // 默认语言
