@@ -78,7 +78,10 @@ const Quadrillion: React.FC = () => {
                     </SortableContext>
                 </DndContext>
             </div>
-            <p className="text-center animate-pulse">You only have 1 of quadrillion probability of being blessed.</p>
+            <div className="flex flex-col gap-1 mt-10">
+                <p className="text-center animate-pulse italic my-0">This door is opened only at probability of a quadrillion to one.</p>
+                <p className="text-center animate-pulse italic my-0">You will be blessed only at probability of a quadrillion to one.</p>
+            </div>
         </div>
     );
 };
