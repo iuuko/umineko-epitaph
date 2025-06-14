@@ -60,7 +60,7 @@ const About: React.FC = () => {
         <footer className="mt-16 pt-8 text-center flex flex-col gap-4">
           <LanguageSwitcher />
           <Navigation />
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-gray-500 my-0">
             UUKO Lab &copy; {new Date().getFullYear()}
           </p>
         </footer>
