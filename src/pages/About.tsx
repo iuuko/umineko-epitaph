@@ -7,13 +7,13 @@ const About: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center">
-      <div className="max-w-4xl md:w-full bg-white p-4 sm:p-8 md:p-12">
+      <div className="max-w-4xl md:w-full bg-white py-2 px-4 sm:x-8 md:px-12">
         <header className="mb-12 text-center">
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4 text-blue-600">
             {t("pages.about.title")}
           </h1>
-          <p className="text-lg sm:text-xl text-gray-600">
-            {t("pages.about.description")}
+          <p className="text-md text-gray-600">
+            {t("pages.about.version")}: {import.meta.env.VITE_APP_VERSION}
           </p>
         </header>
 

@@ -54,7 +54,8 @@
       "feature1": "レスポンシブデザイン",
       "feature2": "多言語サポート",
       "feature3": "型安全なルーティング",
-      "feature4": "現代的な開発体験"
+      "feature4": "現代的な開発体験",
+      "version": "バージョン"
     },
     "notFound": {
       "title": "ページが見つかりません",

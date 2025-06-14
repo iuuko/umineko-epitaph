@@ -54,7 +54,8 @@
       "feature1": "响应式设计",
       "feature2": "多语言支持",
       "feature3": "类型安全的路由",
-      "feature4": "现代化的开发体验"
+      "feature4": "现代化的开发体验",
+      "version": "版本"
     },
     "notFound": {
       "title": "页面未找到",

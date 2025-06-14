@@ -54,7 +54,8 @@
       "feature1": "Responsive design",
       "feature2": "Multi-language support",
       "feature3": "Type-safe routing",
-      "feature4": "Modern development experience"
+      "feature4": "Modern development experience",
+      "version": "Version"
     },
     "notFound": {
       "title": "Page Not Found",
