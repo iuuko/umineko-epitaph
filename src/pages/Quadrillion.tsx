@@ -18,7 +18,7 @@ import {
 const Quadrillion: React.FC = () => {
     const [phase, setPhase] = useState<number>(0);
     const [quadState, setQuadState] = useState<string[]>(() => Array.from("Quadrillion"));
-    const [draggable, setDraggable] = useState(true);
+    const [draggable, setDraggable] = useState(false);
 
     // sortable sensors
     const sensors = useSensors(
@@ -48,7 +48,7 @@ const Quadrillion: React.FC = () => {
         if (phase === 0) {
             // remove the character at the index
             const newQuadState = [...quadState];
-            newQuadState[index] = "";
+            newQuadState[index] = "·";
             setQuadState(newQuadState);
             nextPhase(phase);
         }
@@ -106,10 +106,14 @@ const SortableItem = ({
         transition,
     } = useSortable({ id });
 
-    const style = {
+    const style: React.CSSProperties = {
         transform: transform?.toString(),
         transition,
     };
+
+    if (char === '·') {
+        style.color = 'gray';
+    }
 
     return (
         <span
