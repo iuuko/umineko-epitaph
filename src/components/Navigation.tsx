@@ -15,24 +15,20 @@ const Navigation: React.FC<NavigationProps> = ({ className = "" }) => {
 
   return (
     <nav className={`navigation ${className}`}>
-      <ul className="nav-list">
-        <li className="nav-item">
-          <Link 
-            to="/" 
-            className={`nav-link ${isActive("/") ? "active" : ""}`}
-          >
+      <div className="flex items-center justify-center">
+        <div className="mr-4">
+          <Link to="/" className={`nav-link ${isActive("/") ? "active" : ""}`} text="gray-400">
             {t("navigation.home")}
           </Link>
-        </li>
-        <li className="nav-item">
-          <Link 
-            to="/about" 
-            className={`nav-link ${isActive("/about") ? "active" : ""}`}
-          >
+        </div>
+        <div className="border-l border-gray-300 pl-4">
+          <Link
+            to="/about"
+            className={`nav-link ${isActive("/about") ? "active" : ""}`} text="gray-400">
             {t("navigation.about")}
           </Link>
-        </li>
-      </ul>
+        </div>
+      </div>
     </nav>
   );
 };
