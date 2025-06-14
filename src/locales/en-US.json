@@ -45,7 +45,7 @@
       "feature3": "Client-side routing navigation"
     },
     "about": {
-      "title": "About Us",
+      "title": "About",
       "description": "Learn more about this project",
       "projectTitle": "Project Introduction",
       "projectDescription": "This is a multilingual React application example built with modern frontend technology stack.",

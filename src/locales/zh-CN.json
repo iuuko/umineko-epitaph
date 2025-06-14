@@ -45,7 +45,7 @@
       "feature3": "客户端路由导航"
     },
     "about": {
-      "title": "关于我们",
+      "title": "关于",
       "description": "了解更多关于这个项目的信息",
       "projectTitle": "项目介绍",
       "projectDescription": "这是一个使用现代前端技术栈构建的多语言React应用示例。",
