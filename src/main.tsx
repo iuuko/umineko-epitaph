@@ -6,6 +6,7 @@ import "virtual:uno.css";
 import "@/i18n";
 import Home from "@/pages/Home";
 import About from "@/pages/About";
+import Quadrillion from "@/pages/Quadrillion";
 import NotFound from "@/pages/NotFound";
 
 // 创建路由配置
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
   {
     path: "/about",
     element: <About />,
+  },
+  {
+    path: "/quadrillion",
+    element: <Quadrillion />,
   },
   {
     path: "*",
