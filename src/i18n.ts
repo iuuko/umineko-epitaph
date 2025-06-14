@@ -39,12 +39,32 @@ i18n
   .init({
     resources,
     fallbackLng: "ja-JP", // 默认语言
-    debug: import.meta.env.DEV, // 开发环境下启用调试
 
     // 语言检测配置
     detection: {
       order: ["localStorage", "navigator", "htmlTag"],
       caches: ["localStorage"],
+      // 添加语言代码映射
+      lookupLocalStorage: "i18nextLng",
+      lookupFromPathIndex: 0,
+      lookupFromSubdomainIndex: 0,
+      // 语言代码转换
+      convertDetectedLanguage: (lng: string) => {
+        // 处理常见的语言代码映射
+        const languageMap: Record<string, string> = {
+          zh: "zh-CN",
+          "zh-cn": "zh-CN",
+          "zh-Hans": "zh-CN",
+          "zh-Hans-CN": "zh-CN",
+          ja: "ja-JP",
+          "ja-jp": "ja-JP",
+          en: "en-US",
+          "en-us": "en-US",
+        };
+        const normalizedLng = lng.toLowerCase();
+        const mappedLang = languageMap[normalizedLng] || lng;
+        return mappedLang;
+      },
     },
 
     interpolation: {
@@ -55,5 +75,17 @@ i18n
     defaultNS: "translation",
     ns: ["translation"],
   });
+
+// 添加语言变化监听器用于调试
+if (import.meta.env.DEV) {
+  i18n.on("languageChanged", (lng) => {
+    console.log("🔄 Language changed to:", lng);
+  });
+
+  i18n.on("initialized", () => {
+    console.log("🚀 i18n initialized with language:", i18n.language);
+    console.log("🌍 Supported languages:", supportedLanguages.map(l => l.code));
+  });
+}
 
 export default i18n;
