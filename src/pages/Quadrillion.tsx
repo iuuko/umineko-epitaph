@@ -105,7 +105,7 @@ const Quadrillion: React.FC = () => {
     useEffect(() => { nextPhase(phase); }, [quadState]);
 
     return (
-        <div className="h-screen flex flex-col items-center justify-center overflow-hidden p-4 select-none">
+        <div className="h-screen flex flex-col items-center justify-center overflow-hidden select-none">
             <div className="text-5xl font-bold flex lt-sm:gap-1 sm:gap-2 md:gap-3 touch-none">
                 <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
                     <SortableContext items={quadState.map((_, index) => index.toString())}
