@@ -52,13 +52,16 @@ const Quadrillion: React.FC = () => {
             setQuadState(newQuadState);
             nextPhase(phase);
         }
+        console.log(quadState);
     };
     // handle next phase
     const nextPhase = (currentPhase: number) => {
         if (currentPhase === 0) {
-            // const expectedState = ["Q", "u", "a", "d", "r", "i", "l", "l", "i", "o", "n"];
-            // if (quadState.every((char, index) => char === expectedState[index]))
-            //     setPhase(1);
+            const expectedState = ['·', 'u', '·', 'd', 'r', '·', 'l', 'l', '·', 'o', '·'];
+            if (quadState.every((char, index) => char === expectedState[index])) {
+                setPhase(1);
+                setDraggable(true);
+            }
         }
     };
 
@@ -71,6 +74,7 @@ const Quadrillion: React.FC = () => {
                         {quadState.map((char, index) => (char &&
                             <SortableItem
                                 id={index.toString()}
+                                key={index}
                                 char={char}
                                 onClick={handleClick}
                                 draggable={draggable} />
