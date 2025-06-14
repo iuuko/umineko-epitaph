@@ -24,28 +24,9 @@ const Home: React.FC = () => {
         </div>
         {/* Epitaph */}
         <div text="amber-400 2xl center">
-          <p>{t("epitaph.1")}</p>
-          <p>{t("epitaph.2")}</p>
-          <p>{t("epitaph.3")}</p>
-          <p>{t("epitaph.4")}</p>
-          <p>{t("epitaph.5")}</p>
-          <p>{t("epitaph.6")}</p>
-          <p>{t("epitaph.7")}</p>
-          <p>{t("epitaph.8")}</p>
-          <p>{t("epitaph.9")}</p>
-          <p>{t("epitaph.10")}</p>
-          <p>{t("epitaph.11")}</p>
-          <p>{t("epitaph.12")}</p>
-          <p>{t("epitaph.13")}</p>
-          <p>{t("epitaph.14")}</p>
-          <p>{t("epitaph.15")}</p>
-          <p>{t("epitaph.16")}</p>
-          <p>{t("epitaph.17")}</p>
-          <p>{t("epitaph.18")}</p>
-          <p>{t("epitaph.19")}</p>
-          <p>{t("epitaph.20")}</p>
-          <p>{t("epitaph.21")}</p>
-          <p>{t("epitaph.22")}</p>
+          {[...Array(22).keys()].map((i) => (
+            <p key={i}>{t(`epitaph.${i + 1}`)}</p>
+          ))}
         </div>
         <div>
           <LanguageSwitcher />
