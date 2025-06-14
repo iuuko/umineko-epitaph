@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 
-const AboutPage: React.FC = () => {
+const About: React.FC = () => {
   const { t } = useTranslation();
 
   return (
@@ -37,4 +37,4 @@ const AboutPage: React.FC = () => {
   );
 };
 
-export default AboutPage;
+export default About;

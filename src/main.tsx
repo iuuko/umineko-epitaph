@@ -1,12 +1,31 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "@/index.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import "@/base.css";
 import "virtual:uno.css";
-import "@/i18n"; // 初始化i18n
-import App from "@/App.tsx";
+import "@/i18n";
+import Home from "@/pages/Home";
+import About from "@/pages/About";
+import NotFound from "@/pages/NotFound";
+
+// 创建路由配置
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
+  {
+    path: "/about",
+    element: <About />,
+  },
+  {
+    path: "*",
+    element: <NotFound />,
+  },
+]);
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </StrictMode>
 );

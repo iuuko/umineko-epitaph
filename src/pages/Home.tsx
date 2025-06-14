@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 
-const HomePage: React.FC = () => {
+const Home: React.FC = () => {
   const { t } = useTranslation();
 
   return (
@@ -34,4 +34,4 @@ const HomePage: React.FC = () => {
   );
 };
 
-export default HomePage;
+export default Home;
