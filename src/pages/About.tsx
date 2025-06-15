@@ -1,4 +1,4 @@
-import { useTranslation } from "react-i18next";
+import { useTranslation, Trans } from "react-i18next";
 import Navigation from "@/components/Navigation";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { useDocTitle } from "@/hooks/useDocTitle";
@@ -25,7 +25,7 @@ const About: React.FC = () => {
               {t("pages.about.projectTitle")}
             </h2>
             <p className="text-base sm:text-lg leading-relaxed text-gray-700 mb-8">
-              {t("pages.about.projectDescription")}
+              <Trans i18nKey="pages.about.projectDescription" components={{ bold: <b />, red: <span text="red-6" /> }} />
             </p>
 
             <div className="grid md:grid-cols-2 gap-x-12 gap-y-8">

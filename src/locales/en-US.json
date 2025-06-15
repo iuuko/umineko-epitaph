@@ -40,7 +40,7 @@
       "title": "About",
       "description": "Learn more about this project",
       "projectTitle": "Project Introduction",
-      "projectDescription": "Let's challenge Old Kinzo to a battle of wits with that little online game featuring the Witch's epitaph from Umineko: When They Cry!",
+      "projectDescription": "Let's challenge Old Kinzo to a battle of wits with that little online game featuring the Witch's epitaph from <bold>Umineko: When They <red>C</red>ry!</bold>",
       "technologiesTitle": "Technologies",
       "featuresTitle": "Features",
       "feature1": "Responsive design",

@@ -40,7 +40,7 @@
       "title": "について",
       "description": "このプロジェクトについて詳しく知る",
       "projectTitle": "プロジェクト紹介",
-      "projectDescription": "『うみねこのなく頃に』に登場する魔女の碑文のオンライン・ミニゲームで、金蔵おじいちゃんと知恵比べをしてみましょう！",
+      "projectDescription": "『<bold>うみねこの<red>な</red>く頃に</bold>』に登場する魔女の碑文のオンライン・ミニゲームで、金蔵おじいちゃんと知恵比べをしてみましょう！",
       "technologiesTitle": "技術スタック",
       "featuresTitle": "機能",
       "feature1": "レスポンシブデザイン",
