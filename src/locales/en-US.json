@@ -34,14 +34,7 @@
   },
   "pages": {
     "home": {
-      "title": "Home",
-      "description": "Welcome to our multilingual React application",
-      "welcomeTitle": "Welcome",
-      "welcomeMessage": "This is a modern React application with multi-language support and client-side routing.",
-      "featuresTitle": "Key Features",
-      "feature1": "React 19 + TypeScript support",
-      "feature2": "Multi-language internationalization (Chinese, English, Japanese)",
-      "feature3": "Client-side routing navigation"
+      "title": "Home"
     },
     "about": {
       "title": "About",

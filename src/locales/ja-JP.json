@@ -34,14 +34,7 @@
   },
   "pages": {
     "home": {
-      "title": "ホーム",
-      "description": "多言語対応Reactアプリケーションへようこそ",
-      "welcomeTitle": "ようこそ",
-      "welcomeMessage": "これは多言語対応とクライアントサイドルーティングを備えた現代的なReactアプリケーションです。",
-      "featuresTitle": "主な機能",
-      "feature1": "React 19 + TypeScript サポート",
-      "feature2": "多言語国際化対応（中国語、英語、日本語）",
-      "feature3": "クライアントサイドルーティングナビゲーション"
+      "title": "ホーム"
     },
     "about": {
       "title": "について",

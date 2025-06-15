@@ -34,14 +34,7 @@
   },
   "pages": {
     "home": {
-      "title": "首页",
-      "description": "欢迎来到我们的多语言React应用",
-      "welcomeTitle": "欢迎使用",
-      "welcomeMessage": "这是一个现代化的React应用，支持多语言和客户端路由。",
-      "featuresTitle": "主要特性",
-      "feature1": "React 19 + TypeScript 支持",
-      "feature2": "多语言国际化 (中文、英语、日语)",
-      "feature3": "客户端路由导航"
+      "title": "首页"
     },
     "about": {
       "title": "关于",
