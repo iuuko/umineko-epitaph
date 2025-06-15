@@ -47,7 +47,11 @@
       "feature2": "多语言支持",
       "feature3": "类型安全的路由",
       "feature4": "现代化的开发体验",
-      "version": "版本"
+      "version": "版本",
+      "todoTitle": "待办事项",
+      "todo1": "完善文案",
+      "todo2": "美化界面",
+      "todo3": "完善国际化翻译"
     },
     "quadrillion":{
       "title":"九羽鸟庵"

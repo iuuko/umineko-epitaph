@@ -47,7 +47,11 @@
       "feature2": "多言語サポート",
       "feature3": "型安全なルーティング",
       "feature4": "現代的な開発体験",
-      "version": "バージョン"
+      "version": "バージョン",
+      "todoTitle": "待办事项",
+      "todo1": "完善文案",
+      "todo2": "美化界面",
+      "todo3": "完善国际化翻译"
     },
     "quadrillion":{
       "title":"クワドリアン"

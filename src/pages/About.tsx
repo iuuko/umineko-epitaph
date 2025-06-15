@@ -55,6 +55,17 @@ const About: React.FC = () => {
                   <li>{t("pages.about.feature4")}</li>
                 </ul>
               </div>
+
+              <div>
+                <h3 className="text-xl sm:text-2xl font-semibold mb-4 text-gray-700">
+                  {t("pages.about.todoTitle")}
+                </h3>
+                <ul className="list-disc list-inside space-y-2 pl-5 text-gray-600">
+                  <li>{t("pages.about.todo1")}</li>
+                  <li>{t("pages.about.todo2")}</li>
+                  <li>{t("pages.about.todo3")}</li>
+                </ul>
+              </div>
             </div>
           </section>
         </main>
@@ -63,7 +74,7 @@ const About: React.FC = () => {
           <LanguageSwitcher />
           <Navigation />
           <p className="text-sm text-gray-500 my-0">
-            UUKO Lab &copy; {new Date().getFullYear()}
+            <a href="https://lab.iuuko.com" target="_blank" className="text-gray-500 decoration-none hover:underline">UUKO Lab</a> &copy; {new Date().getFullYear()}
           </p>
         </footer>
       </div>
