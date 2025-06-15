@@ -1,153 +1,129 @@
-# React 国际化应用 (React i18n App)
+# Umineko Epitaph
 
-这是一个现代化的 React 应用，具有完整的国际化支持，使用 Vite 构建工具和 TypeScript 开发。
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![React](https://img.shields.io/badge/React-19.1.0-blue.svg)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.8.3-blue.svg)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-6.3.5-purple.svg)](https://vitejs.dev/)
 
-## 🌟 功能特性
+A modern, interactive web application presenting the legendary **Witch's Epitaph** from the *Umineko When They Cry* visual novel series. Experience the mystery and beauty of Beatrice's riddle in multiple languages with a stunning visual presentation.
 
-- ✨ **国际化支持** - 支持中文、日语、英语三种语言
-- 🧭 **客户端路由** - 使用 React Router DOM 实现单页应用导航
-- 🔷 **TypeScript 支持** - 完整的类型安全，包括路由类型定义
-- ⚡ **Vite 构建工具** - 快速的开发体验
-- 🚀 **现代 React 开发** - 使用 React 19+最新特性
-- 🎨 **响应式设计** - 适配移动端和桌面端
-- 🔧 **自定义 Hooks** - 封装语言偏好管理逻辑
+## Features
 
-## 🚀 快速开始
+- **Multi-language Support**: Available in English, Japanese, and Chinese
+- **Responsive Design**: Optimized for desktop and mobile devices
+- **Beautiful UI**: Atmospheric design with background imagery and elegant typography
+- **Interactive Elements**: Includes puzzle features and drag-and-drop functionality
+- **Epitaph Display**: Full presentation of the 22-line Witch's Epitaph
+- **Golden Land**: Explore additional content related to the series
+- **Quadrillion Puzzle**: Interactive number puzzle game
 
-### 安装依赖
+## Getting Started
 
+### Prerequisites
+
+- Node.js (version 18 or higher)
+- pnpm (recommended) or npm
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/iuuko/umineko-epitaph.git
+cd umineko-epitaph
+```
+
+2. Install dependencies:
 ```bash
 pnpm install
+# or
+npm install
 ```
 
-### 启动开发服务器
-
+3. Start the development server:
 ```bash
-pnpm run dev
+pnpm dev
+# or
+npm run dev
 ```
 
-应用将在 `http://localhost:5173/` 启动
+4. Open your browser and navigate to `http://localhost:5173`
 
-### 构建生产版本
+## Available Scripts
 
-```bash
-pnpm run build
-```
+- `pnpm dev` - Start development server
+- `pnpm build` - Build for production
+- `pnpm preview` - Preview production build
+- `pnpm lint` - Run ESLint
 
-### 预览生产版本
+## Tech Stack
 
-```bash
-pnpm run preview
-```
+- **Frontend Framework**: React 19.1.0
+- **Language**: TypeScript 5.8.3
+- **Build Tool**: Vite 6.3.5
+- **Styling**: UnoCSS with Attributify preset
+- **Routing**: React Router DOM 7.6.1
+- **Internationalization**: i18next with React integration
+- **Drag & Drop**: @dnd-kit/core and @dnd-kit/sortable
+- **Linting**: ESLint 9 with TypeScript support
 
-## 📁 项目结构
+## Project Structure
 
 ```
 src/
-├── components/           # React组件
-│   ├── LanguageSwitcher.tsx  # 语言切换组件
-│   ├── Navigation.tsx        # 导航组件
-│   └── Layout.tsx           # 布局组件
-├── pages/               # 页面组件
-│   ├── HomePage.tsx     # 首页
-│   ├── AboutPage.tsx    # 关于页面
-│   └── NotFoundPage.tsx # 404错误页面
-├── router/              # 路由配置
-│   └── index.tsx        # 路由定义和类型
-├── hooks/               # 自定义Hooks
-│   └── useLanguagePreference.ts  # 语言偏好管理Hook
-├── locales/             # 语言资源文件
-│   ├── zh-CN.json      # 中文资源
-│   ├── ja-JP.json      # 日语资源
-│   └── en-US.json      # 英语资源
-├── i18n.ts             # i18n配置文件
-├── App.tsx             # 主应用组件
-└── main.tsx            # 应用入口
+├── components/          # Reusable UI components
+├── hooks/              # Custom React hooks
+├── locales/            # Translation files (en-US, ja-JP, zh-CN)
+├── pages/              # Page components
+│   ├── Home.tsx        # Main epitaph display
+│   ├── About.tsx       # Project information
+│   ├── Quadrillion.tsx # Interactive puzzle
+│   ├── GoldenLand.tsx  # Additional content
+│   └── NotFound.tsx    # 404 page
+├── i18n.ts             # Internationalization setup
+├── main.tsx            # Application entry point
+└── base.css            # Global styles
 ```
 
-## 🧭 路由配置
+## Internationalization
 
-### 路由结构
+The application supports three languages:
+- English (en-US)
+- Japanese (ja-JP)
+- Chinese Simplified (zh-CN)
 
-- `/` - 首页 (HomePage)
-- `/about` - 关于页面 (AboutPage)
-- `/*` - 404 错误页面 (NotFoundPage) - 处理未匹配的路由
+Language detection is automatic based on browser settings, with manual switching available through the language selector.
 
-### 路由特性
+## The Witch's Epitaph
 
-- **类型安全** - 使用 TypeScript 定义路由路径常量
-- **嵌套路由** - 支持布局组件和子路由
-- **导航高亮** - 自动高亮当前页面的导航链接
-- **404 处理** - 优雅处理未找到的页面
+> *"Behold the sweetfish river, running through my beloved home of old.  
+> You who seek the Golden Land, follow its path downstream in search of the key..."*
 
-### 添加新路由
+This application presents the complete 22-line riddle that serves as a central mystery in the Umineko series. Each line is carefully translated and presented with atmospheric styling to capture the mystique of the original work.
 
-1. 在 `src/pages/` 目录下创建新的页面组件
-2. 在 `src/router/index.tsx` 中添加路由配置
-3. 在多语言资源文件中添加页面相关的文本
-4. 在 `src/components/Navigation.tsx` 中添加导航链接（如需要）
+## Contributing
 
-## 🌍 国际化配置
+Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
 
-### 支持的语言
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-- 🇨🇳 简体中文 (zh-CN)
-- 🇯🇵 日本語 (ja-JP)
-- 🇺🇸 English (en-US)
+## License
 
-### 添加新语言
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-1. 在 `src/locales/` 目录下创建新的语言文件（如 `fr-FR.json`）
-2. 复制现有语言文件的结构并翻译内容
-3. 在 `src/i18n.ts` 中导入新语言文件并添加到资源配置
-4. 更新 `supportedLanguages` 数组
+## Acknowledgments
 
-### 使用翻译
+- **07th Expansion** - Creators of the Umineko When They Cry series
+- **Ryukishi07** - Original author and creator of the Witch's Epitaph
+- The Umineko community for keeping the mystery alive
 
-```tsx
-import { useTranslation } from "react-i18next";
+## Contact
 
-function MyComponent() {
-  const { t } = useTranslation();
+If you have any questions or suggestions, feel free to open an issue or contact the maintainer.
 
-  return <h1>{t("welcome")}</h1>;
-}
-```
+---
 
-## 🛠️ 技术栈
-
-- **React 19+** - 用户界面库
-- **TypeScript** - 类型安全的 JavaScript
-- **Vite** - 现代化构建工具
-- **React Router DOM** - 客户端路由库
-- **react-i18next** - React 国际化库
-- **i18next** - 国际化框架
-- **pnpm** - 高效的包管理器
-
-## 📝 开发说明
-
-### 自定义 Hook 使用
-
-项目包含一个自定义 Hook `useLanguagePreference`，提供以下功能：
-
-```tsx
-const {
-  currentLanguage, // 当前语言代码
-  currentLanguageName, // 当前语言显示名称
-  availableLanguages, // 可用语言列表
-  changeLanguage, // 切换语言函数
-  isLanguageSupported, // 检查语言是否支持
-} = useLanguagePreference();
-```
-
-### 样式定制
-
-所有样式都在 `src/App.css` 中定义，使用 CSS 变量和现代 CSS 特性，支持响应式设计。
-
-## 🤝 贡献
-
-欢迎提交 Issue 和 Pull Request 来改进这个项目！
-
-## 📄 许可证
-
-MIT License
+*"Without love, it cannot be seen."*
