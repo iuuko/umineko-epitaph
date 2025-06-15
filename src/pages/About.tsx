@@ -49,6 +49,8 @@ const About: React.FC = () => {
                   <li>{t("pages.about.todo1")}</li>
                   <li>{t("pages.about.todo2")}</li>
                   <li>{t("pages.about.todo3")}</li>
+                  <li>{t("pages.about.todo4")}</li>
+                  <li>{t("pages.about.todo5")}</li>
                 </ul>
               </div>
 
