@@ -31,21 +31,6 @@ const About: React.FC = () => {
             <div className="grid md:grid-cols-2 gap-x-12 gap-y-8">
               <div>
                 <h3 className="text-xl sm:text-2xl font-semibold mb-4 text-gray-700">
-                  {t("pages.about.technologiesTitle")}
-                </h3>
-                <ul className="list-disc list-inside space-y-2 pl-5 text-gray-600">
-                  <li>React 19</li>
-                  <li>TypeScript</li>
-                  <li>Vite</li>
-                  <li>React Router DOM</li>
-                  <li>React i18next</li>
-                  <li>UnoCSS</li>
-                  <li>React DnD</li>
-                </ul>
-              </div>
-
-              <div>
-                <h3 className="text-xl sm:text-2xl font-semibold mb-4 text-gray-700">
                   {t("pages.about.featuresTitle")}
                 </h3>
                 <ul className="list-disc list-inside space-y-2 pl-5 text-gray-600">
@@ -64,6 +49,21 @@ const About: React.FC = () => {
                   <li>{t("pages.about.todo1")}</li>
                   <li>{t("pages.about.todo2")}</li>
                   <li>{t("pages.about.todo3")}</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="text-xl sm:text-2xl font-semibold mb-4 text-gray-700">
+                  {t("pages.about.technologiesTitle")}
+                </h3>
+                <ul className="list-disc list-inside space-y-2 pl-5 text-gray-600">
+                  <li>React 19</li>
+                  <li>TypeScript</li>
+                  <li>Vite</li>
+                  <li>React Router DOM</li>
+                  <li>React i18next</li>
+                  <li>UnoCSS</li>
+                  <li>React DnD</li>
                 </ul>
               </div>
             </div>
