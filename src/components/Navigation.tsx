@@ -22,6 +22,14 @@ const Navigation: React.FC = () => {
         </div>
         <div>
           <Link
+            to="/hint"
+            className={`nav-link ${isActive("/hint") ? "font-bold" : ""}`}
+            text="gray-400">
+            {t("navigation.hint")}
+          </Link>
+        </div>
+        <div>
+          <Link
             to="/about"
             className={`nav-link ${isActive("/about") ? "font-bold" : ""}`}
             text="gray-400">

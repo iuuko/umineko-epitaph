@@ -5,6 +5,7 @@
   "currentLanguage": "現在の言語：{{language}}",
   "navigation": {
     "home": "ホーム",
+    "hint": "ヒント",
     "about": "について"
   },
   "epitaph": {
@@ -60,6 +61,9 @@
     },
     "goldenLand":{
       "title":"黄金郷"
+    },
+    "hint":{
+      "title":"ヒント"
     },
     "notFound": {
       "title": "そなたは無能だ！",

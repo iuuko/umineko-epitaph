@@ -5,6 +5,7 @@
   "currentLanguage": "当前语言：{{language}}",
   "navigation": {
     "home": "首页",
+    "hint": "提示",
     "about": "关于"
   },
   "epitaph": {
@@ -60,6 +61,19 @@
     },
     "goldenLand":{
       "title":"黄金乡"
+    },
+    "hint":{
+      "title":"提示",
+      "description":"在此可以查看游戏的提示信息。若这能对您有所帮助，将是我的荣幸。",
+      "part1":{
+        "description":"标准难度，既然是最开始那就先以王道进行。"
+      },
+      "part2":{
+        "description":""
+      },
+      "part3":{
+        "description":""
+      }
     },
     "notFound": {
       "title": "汝好无能！",
