@@ -25,7 +25,7 @@ const Hint: React.FC = () => {
                 <main className="px-8 text-lg">
                     <h1>{t("pages.hint.title")}</h1>
                     <p text="gray-3">{t("pages.hint.description")}</p>
-                    <div className="flex gap-6 flex-col sm:flex-row">
+                    <div className="flex gap-8 flex-col sm:flex-row">
                         <HintLeft selectedPart={selectedPart} setSelectedPart={setSelectedPart} />
                         <HintRight selectedPart={selectedPart} />
                     </div>
