@@ -131,9 +131,8 @@ const HintItem: React.FC<{ children?: React.ReactNode, selectedPart: number }> =
             {/* 遮罩层 */}
             {!isRevealed && (
                 <div
-                    className="absolute inset-0 bg-gray-6 bg-opacity-100 backdrop-blur-sm 
-                               rounded-sm flex items-center justify-center text-white text-sm
-                               transition-all duration-200">
+                    className="absolute inset-0 bg-gray-6 bg-opacity-100 select-none
+                               rounded-sm flex items-center justify-center text-white text-sm">
                     {t("pages.hint.clicktoview")}
                 </div>
             )}
