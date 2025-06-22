@@ -5,6 +5,7 @@ import Navigation from "@/components/Navigation";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 
+
 const Hint: React.FC = () => {
     const { t } = useTranslation();
     useDocTitle(t("pages.hint.title"));
@@ -47,7 +48,7 @@ const HintLeft: React.FC<{ selectedPart: number, setSelectedPart: (part: number)
         const { t } = useTranslation();
 
         return (
-            <div className="relative w-full h-80 sm:w-2/5 flex-col ">
+            <div className="relative w-full min-h-80 sm:w-2/5 flex-col ">
                 {/* Left Background - 左侧区域背景 */}
                 <div
                     className="absolute inset-0 z-0 pointer-events-none rounded-lg"
@@ -81,7 +82,7 @@ const HintLeft: React.FC<{ selectedPart: number, setSelectedPart: (part: number)
 
 const HintRight: React.FC<{ selectedPart: number }> = ({ selectedPart }) => {
     return (
-        <div className="relative w-full h-80 sm:w-3/5 flex-col">
+        <div className="relative w-full min-h-80 sm:w-3/5 flex-col">
             {/* Right Background - 右侧区域背景 */}
             <div
                 className="absolute inset-0 z-0 pointer-events-none rounded-lg"
@@ -103,7 +104,7 @@ const HintRight: React.FC<{ selectedPart: number }> = ({ selectedPart }) => {
                             bold: <b />,
                             red: <span text="red-6" />,
                             ul: <ul />,
-                            li: <li className="mt-2" />,
+                            li: <HintItem />,
                             map: <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer"
                                 className="underline text-white" />
                         }} />
@@ -112,5 +113,34 @@ const HintRight: React.FC<{ selectedPart: number }> = ({ selectedPart }) => {
         </div>
     )
 }
+
+const HintItem: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
+    const { t } = useTranslation();
+    const [isRevealed, setIsRevealed] = useState(false);
+
+    const handleClick = () => {
+        setIsRevealed(true);
+    };
+
+    return (
+        <li
+            className={`mt-2 relative ${isRevealed ? 'cursor-default' : 'cursor-pointer'}`}
+            onClick={handleClick}>
+            {/* 内容 */}
+            <div>
+                {children}
+            </div>
+            {/* 遮罩层 */}
+            {!isRevealed && (
+                <div
+                    className="absolute inset-0 bg-gray-6 bg-opacity-100 backdrop-blur-sm 
+                               rounded-sm flex items-center justify-center text-white text-sm
+                               transition-all duration-200">
+                    {t("pages.hint.clicktoview")}
+                </div>
+            )}
+        </li>
+    );
+};
 
 export default Hint;
