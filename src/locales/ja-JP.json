@@ -63,7 +63,21 @@
       "title":"黄金郷"
     },
     "hint":{
-      "title":"ヒント"
+      "title":"提示",
+      "description":"在此可以查看游戏的提示信息。若这能对您有所帮助，将是我的荣幸。",
+      "clicktoview":"点击查看",
+      "part1":{
+        "title":"标准开局",
+        "description":"<ul><li>您需要根据碑文的提示，找出正确的<bold> URL 路径</bold>。</li><li>路径即地址栏中域名之后的部分，例如该页面的路径为<bold> /hint</bold>。</li><li>碑文作者右代宮金蔵，掌握<bold>中日英</bold>三种语言。</li><li>右代宮金蔵的英文名为 Ushiromiya Kinzo。</li><li>建议先从令人怀念的<bold>故乡</bold>入手，您可能需要一张<map>地图</map>。</li><li>您可以从游戏或漫画中寻找线索。</li></ul>"
+      },
+      "part2":{
+        "title":"迷雾散去",
+        "description":"<ul><li>令人怀念的故乡指的是<bold>台湾</bold>。</li><li>鲇鱼是<bold>淡水鱼</bold>。</li><li>川可以指河流以外能<bold>流动</bold>的东西。</li><li>钥匙选出的六名活祭是什么？</li><li>只有第十晚的“黄金乡”中多了个“<bold>之</bold>”字。</li><li>“乡”的日语读音同“京”。</li><li>礼拜堂门口写着“你只有千亿分之一的几率得到祝福”。</li></ul>"
+      },
+      "part3":{
+        "title":"尘归尘，幻归幻",
+        "description":"<ul><li>令人怀念的故乡指的是<bold>台北</bold>。</li><li>鲇之川指的是<bold><metro>淡水线</metro></bold>。</li><li>里、口和岸指的是<bold>唭哩岸</bold>站。</li><li>活祭是六个字母 <bold>Qilian</bold>。</li><li>踏上黄金乡之旅，URL 是 <bold><qd>/quadrillion</qd></bold>。</li><li>Quadrillion 页面的字母可以点击或拖拽排序。</li><li>献上六名活祭之后为 ·u·dr··l·o·</li><li>撕裂紧靠的两人之后为 ·u·d·r·l·o·</li><li>赞颂吾高贵之名即 ·l·o·r·d·u·</li><li>之后从左往右点击剩余字母即可。</li></ul>"
+      }
     },
     "notFound": {
       "title": "そなたは無能だ！",
