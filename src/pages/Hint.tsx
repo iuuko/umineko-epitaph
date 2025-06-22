@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation, Trans } from "react-i18next";
 import { useDocTitle } from "@/hooks/useDocTitle";
 import Navigation from "@/components/Navigation";
@@ -104,7 +104,7 @@ const HintRight: React.FC<{ selectedPart: number }> = ({ selectedPart }) => {
                             bold: <b />,
                             red: <span text="red-6" />,
                             ul: <ul />,
-                            li: <HintItem />,
+                            li: <HintItem selectedPart={selectedPart} />,
                             map: <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer"
                                 className="underline text-white" />
                         }} />
@@ -114,18 +114,16 @@ const HintRight: React.FC<{ selectedPart: number }> = ({ selectedPart }) => {
     )
 }
 
-const HintItem: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
+const HintItem: React.FC<{ children?: React.ReactNode, selectedPart: number }> = ({ children, selectedPart }) => {
     const { t } = useTranslation();
     const [isRevealed, setIsRevealed] = useState(false);
-
-    const handleClick = () => {
-        setIsRevealed(true);
-    };
+    // reset isRevealed when selectedPart changes
+    useEffect(() => { setIsRevealed(false); }, [selectedPart]);
 
     return (
         <li
             className={`mt-2 relative ${isRevealed ? 'cursor-default' : 'cursor-pointer'}`}
-            onClick={handleClick}>
+            onClick={() => setIsRevealed(true)}>
             {/* 内容 */}
             <div>
                 {children}
