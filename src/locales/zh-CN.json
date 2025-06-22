@@ -68,11 +68,11 @@
       "clicktoview":"点击查看",
       "part1":{
         "title":"标准开局",
-        "description":"<ul><li>您需要根据碑文的提示，找出正确的<bold> URL 路径</bold>。</li><li>路径即地址栏中域名之后的部分，例如该页面的路径为<bold> /hint</bold>。</li><li>碑文作者右代宮金蔵，掌握<bold>中日英</bold>三种语言。</li><li>建议先从令人怀念的<bold>故乡</bold>入手，您可能需要一张<map>地图</map>。</li><li>您可以从游戏或漫画中寻找线索。</li></ul>"
+        "description":"<ul><li>您需要根据碑文的提示，找出正确的<bold> URL 路径</bold>。</li><li>路径即地址栏中域名之后的部分，例如该页面的路径为<bold> /hint</bold>。</li><li>碑文作者右代宮金蔵，掌握<bold>中日英</bold>三种语言。</li><li>右代宮金蔵的英文名为 Ushiromiya Kinzo。</li><li>建议先从令人怀念的<bold>故乡</bold>入手，您可能需要一张<map>地图</map>。</li><li>您可以从游戏或漫画中寻找线索。</li></ul>"
       },
       "part2":{
         "title":"迷雾散去",
-        "description":"<ul><li>To be edited.</li></ul>"
+        "description":"<ul><li>令人怀念的故乡指的是<bold>台湾</bold>。</li><li>鲇鱼是<bold>淡水鱼</bold>。</li><li>川可以指河流以外能<bold>流动</bold>的东西。</li><li>钥匙选出的六名活祭是什么？</li><li>只有第十晚的“黄金乡”中多了个“<bold>之</bold>”字。</li><li>“乡”的日语读音同“京”。</li><li>礼拜堂门口写着“你只有千亿分之一的几率得到祝福”。</li></ul>"
       },
       "part3":{
         "title":"尘归尘，幻归幻",

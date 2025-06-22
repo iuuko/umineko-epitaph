@@ -104,7 +104,8 @@ const HintRight: React.FC<{ selectedPart: number }> = ({ selectedPart }) => {
                             bold: <b />,
                             red: <span text="red-6" />,
                             ul: <ul />,
-                            li: <HintItem selectedPart={selectedPart} />,
+                            li: <li />,
+                            // li: <HintItem selectedPart={selectedPart} />,
                             map: <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer"
                                 className="underline text-white" />
                         }} />
