@@ -48,7 +48,7 @@ const HintLeft: React.FC<{ selectedPart: number, setSelectedPart: (part: number)
         const { t } = useTranslation();
 
         return (
-            <div className="relative w-full min-h-80 sm:w-2/5 flex-col ">
+            <div className="relative w-full sm:h-80 overflow-y-scroll sm:w-2/5 flex-col ">
                 {/* Left Background - 左侧区域背景 */}
                 <div
                     className="absolute inset-0 z-0 pointer-events-none rounded-lg"
@@ -63,7 +63,7 @@ const HintLeft: React.FC<{ selectedPart: number, setSelectedPart: (part: number)
                     aria-hidden="true" />
 
                 {/* Left Content */}
-                <div className="relative z-1 p-2 sm:p-4 select-none">
+                <div className="relative z-1 p-4 select-none">
                     {[...Array(3).keys()].map((index) => (
                         <p
                             key={index}
@@ -82,7 +82,7 @@ const HintLeft: React.FC<{ selectedPart: number, setSelectedPart: (part: number)
 
 const HintRight: React.FC<{ selectedPart: number }> = ({ selectedPart }) => {
     return (
-        <div className="relative w-full min-h-80 sm:w-3/5 flex-col">
+        <div className="relative w-full h-80 sm:w-3/5 flex-col">
             {/* Right Background - 右侧区域背景 */}
             <div
                 className="absolute inset-0 z-0 pointer-events-none rounded-lg"
@@ -96,20 +96,25 @@ const HintRight: React.FC<{ selectedPart: number }> = ({ selectedPart }) => {
                 }}
                 aria-hidden="true" />
 
-            {/* Right Content */}
-            <div className="relative z-1 p-2 sm:p-4">
-                <p className="my-0 text-white leading-relaxed drop-shadow-md">
-                    <Trans i18nKey={`pages.hint.part${selectedPart + 1}.description`}
-                        components={{
-                            bold: <b />,
-                            red: <span text="red-6" />,
-                            ul: <ul />,
-                            li: <li />,
-                            // li: <HintItem selectedPart={selectedPart} />,
-                            map: <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer"
-                                className="underline text-white" />
-                        }} />
-                </p>
+            {/* Right Content - 可滚动内容区域 */}
+            <div className="relative z-1 h-full overflow-hidden rounded-lg">
+                <div className="h-full overflow-y-auto p-2">
+                    <p className="my-0 text-white leading-relaxed drop-shadow-md">
+                        <Trans i18nKey={`pages.hint.part${selectedPart + 1}.description`}
+                            components={{
+                                bold: <b />,
+                                red: <span text="red-6" />,
+                                ul: <ul />,
+                                li: <HintItem selectedPart={selectedPart} />,
+                                map: <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer"
+                                    className="underline text-white" />,
+                                metro: <a href="https://www.metro.taipei" target="_blank" rel="noopener noreferrer"
+                                    className="underline text-white" />,
+                                qd: <a href="/quadrillion" target="_blank" rel="noopener noreferrer"
+                                    className="underline text-white" />
+                            }} />
+                    </p>
+                </div>
             </div>
         </div>
     )
@@ -123,7 +128,7 @@ const HintItem: React.FC<{ children?: React.ReactNode, selectedPart: number }> =
 
     return (
         <li
-            className={`mt-2 relative ${isRevealed ? 'cursor-default' : 'cursor-pointer'}`}
+            className={`my-3 relative ${isRevealed ? 'cursor-default' : 'cursor-pointer'}`}
             onClick={() => setIsRevealed(true)}>
             {/* 内容 */}
             <div>
@@ -132,7 +137,7 @@ const HintItem: React.FC<{ children?: React.ReactNode, selectedPart: number }> =
             {/* 遮罩层 */}
             {!isRevealed && (
                 <div
-                    className="absolute inset-0 bg-gray-6 bg-opacity-100 select-none
+                    className="absolute inset-0 bg-gray-6 select-none
                                rounded-sm flex items-center justify-center text-white text-sm">
                     {t("pages.hint.clicktoview")}
                 </div>
