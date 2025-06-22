@@ -82,7 +82,7 @@ const HintLeft: React.FC<{ selectedPart: number, setSelectedPart: (part: number)
 
 const HintRight: React.FC<{ selectedPart: number }> = ({ selectedPart }) => {
     return (
-        <div className="relative w-full h-80 sm:w-3/5 flex-col">
+        <div className="relative w-full sm:h-80 sm:w-3/5 flex-col">
             {/* Right Background - 右侧区域背景 */}
             <div
                 className="absolute inset-0 z-0 pointer-events-none rounded-lg"
