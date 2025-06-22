@@ -66,13 +66,16 @@
       "title":"提示",
       "description":"在此可以查看游戏的提示信息。若这能对您有所帮助，将是我的荣幸。",
       "part1":{
-        "description":"标准难度，既然是最开始那就先以王道进行。"
+        "title":"标准开局",
+        "description":"<ul><li>您需要根据碑文的提示，找出正确的<bold>URL路径</bold>。</li><li>碑文作者右代宮金蔵，掌握中日英三种语言。</li><li>建议先从令人怀念的<bold>故乡</bold>入手，您可能需要一张<map>地图</map>。</li><li>您可以从游戏或漫画中寻找线索。</li></ul>"
       },
       "part2":{
-        "description":""
+        "title":"迷雾散去",
+        "description":"<ul><li>To be edited.</li></ul>"
       },
       "part3":{
-        "description":""
+        "title":"尘归尘，幻归幻",
+        "description":"<ul><li>To be edited.</li></ul>"
       }
     },
     "notFound": {

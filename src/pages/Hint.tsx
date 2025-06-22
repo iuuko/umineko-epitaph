@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useTranslation } from "react-i18next";
+import { useTranslation, Trans } from "react-i18next";
 import { useDocTitle } from "@/hooks/useDocTitle";
 import Navigation from "@/components/Navigation";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
@@ -44,6 +44,7 @@ const Hint: React.FC = () => {
 
 const HintLeft: React.FC<{ selectedPart: number, setSelectedPart: (part: number) => void }>
     = ({ selectedPart, setSelectedPart }) => {
+        const { t } = useTranslation();
 
         return (
             <div className="relative w-full h-80 sm:w-2/5 flex-col ">
@@ -61,8 +62,8 @@ const HintLeft: React.FC<{ selectedPart: number, setSelectedPart: (part: number)
                     aria-hidden="true" />
 
                 {/* Left Content */}
-                <div className="relative z-1 p-2 select-none">
-                    {["Part 1", "Part 2", "Part 3"].map((part, index) => (
+                <div className="relative z-1 p-2 sm:p-4 select-none">
+                    {[...Array(3).keys()].map((index) => (
                         <p
                             key={index}
                             className={`font-bold text-2xl my-2 cursor-pointer transition-colors duration-200 ${selectedPart === index
@@ -70,7 +71,7 @@ const HintLeft: React.FC<{ selectedPart: number, setSelectedPart: (part: number)
                                 : "text-gray-400 hover:text-white hover:drop-shadow-md"
                                 }`}
                             onClick={() => setSelectedPart(index)}>
-                            {part}
+                            {t(`pages.hint.part${index + 1}.title`)}
                         </p>
                     ))}
                 </div>
@@ -95,11 +96,17 @@ const HintRight: React.FC<{ selectedPart: number }> = ({ selectedPart }) => {
                 aria-hidden="true" />
 
             {/* Right Content */}
-            <div className="relative z-1 p-2">
+            <div className="relative z-1 p-2 sm:p-4">
                 <p className="my-0 text-white leading-relaxed drop-shadow-md">
-                    {selectedPart === 0 && "Part 1 content: Lorem ipsum dolor sit amet consectetur adipisicing elit."}
-                    {selectedPart === 1 && "Part 2 content: Consectetur obcaecati aliquam in facilis eos aliquid doloribus temporibus."}
-                    {selectedPart === 2 && "Part 3 content: Libero debitis reiciendis magni corporis, aperiam officia impedit."}
+                    <Trans i18nKey={`pages.hint.part${selectedPart + 1}.description`}
+                        components={{
+                            bold: <b />,
+                            red: <span text="red-6" />,
+                            ul: <ul />,
+                            li: <li className="mt-2" />,
+                            map: <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer"
+                                className="underline text-white" />
+                        }} />
                 </p>
             </div>
         </div>
