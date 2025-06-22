@@ -32,3 +32,8 @@ html::-webkit-scrollbar,
 body::-webkit-scrollbar {
   display: none;
 }
+
+/* 点击时无高亮 */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
